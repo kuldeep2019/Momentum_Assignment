@@ -1,0 +1,21 @@
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center; /* align items horizontally to center */
+    align-items: center; /* align items vertically to center */
+    padding: 20px;
+    text-align: center; /* align text to center */
+    font-weight: 100;
+    font-size: medium;
+  }
+  
+  nav a {
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  nav a:last-child {
+    margin-right: 0;
+  }
+  

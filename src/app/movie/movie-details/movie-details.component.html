@@ -1,0 +1,32 @@
+<div class="container-box">
+<div class="search-container">
+    <input type="text" [(ngModel)]="id" class="search-input" placeholder="ID">&nbsp;
+    <input type="text" [(ngModel)]="title" class="search-input" placeholder="Title">&nbsp;
+    <input type="text" [(ngModel)]="year" class="search-input" placeholder="Year">&nbsp;
+    <select class="search-input" [(ngModel)]="plot">
+        <option *ngFor="let option of options" [value]="option">{{option}}</option>
+      </select>&nbsp;
+    <button class="search-button" (click)="onSearch()">Search</button>
+  </div>
+  <div *ngIf="movieDetails">
+  <div class="card">
+    <div class="image">
+      <img [src]="movieDetails.Poster ? movieDetails.Poster : 'path/to/placeholder.jpg'" alt="Movie Poster">
+    </div>
+    <div class="details">
+      <h2>{{movieDetails.Title}}&nbsp;({{movieDetails.Year}})</h2>
+      <p>IMDB Rating: {{movieDetails.imdbRating}}/10
+        <span class="stars">
+            <span class="star">&#9733;</span>
+          </span>
+      </p> 
+      <p>Director: {{movieDetails.Director}}</p>
+      <p>Actors: {{movieDetails.Actors}}</p>
+      <p>Language: {{movieDetails.Language}}</p>
+      <p>Genre: {{movieDetails.Genre}}</p> 
+      <p>BoxOffice: {{movieDetails.BoxOffice}}</p>
+      <!-- <button class="button">Watch Trailer</button> -->
+    </div>
+  </div>
+</div>
+</div>
